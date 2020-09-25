@@ -1,0 +1,28 @@
+rules:
+  - id: not.exist.function.create.render.root
+    not:
+      pattern:
+        regexp: createRenderRoot\(\)([\s\S]*?) return this;([\s\S]*?)}
+    message: |
+      Please add createRenderRoot function to this file
+      ex: createRenderRoot() {
+        return this;
+      }
+    glob: "**/index.ts"
+
+  - id: not.exist.style.tag
+    not:
+      pattern:
+        regexp: return html([\s\S]*?)<style>([\s\S]*?)
+    message: |
+      Please describe style tag inside HTML to perform the styling.
+      ex: render() {
+        return html`
+          <style>
+            kuc-component {
+              display: inline-block;
+            }
+          </style>
+        `;
+      }
+    glob: "**/index.ts"
