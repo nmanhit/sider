@@ -1,0 +1,78 @@
+rules:
+  - id: private.function
+    pattern:
+      regexp: private [^_]
+    message: Please put "_" onto the prefix of private variables or functions.
+    glob: "*.ts"
+
+  - id: handle.event.click
+    message: |
+      Name of function for internal event handler processing
+      will be name as “handle + event handler name + Element name”
+      ex: _handleClickDropdownToggle
+    pattern:
+      regexp: (@click)((?!_handleClick).)*$
+    glob: "*.ts"
+
+  - id: handle.event.change
+    message: |
+      Name of function for internal event handler processing
+      will be name as “handle + event handler name + Element name”
+      ex: _handleChangeDropdownToggle
+    pattern:
+      regexp: (@change)((?!_handleChange).)*$
+    glob: "*.ts"
+
+  - id: handle.event.focus
+    message: |
+      Name of function for internal event handler processing
+      will be name as “handle + event handler name + Element name”
+      ex: _handleFocusDropdownToggle
+    pattern:
+      regexp: (@focus)((?!_handleFocus).)*$
+    glob: "*.ts"
+
+  - id: handle.event.blur
+    message: |
+      Name of function for internal event handler processing
+      will be name as “handle + event handler name + Element name”
+      ex: _handleBlurDropdownToggle
+    pattern:
+      regexp: (@blur)((?!_handleBlur).)*$
+    glob: "*.ts"
+
+  - id: handle.event.keydown
+    message: |
+      Name of function for internal event handler processing
+      will be name as “handle + event handler name + Element name”
+      ex: _handleKeyDownDropdownToggle
+    pattern:
+      regexp: (@keydown)((?!_handleKeyDown).)*$
+    glob: "*.ts"
+
+  - id: handle.event.mousedown
+    message: |
+      Name of function for internal event handler processing
+      will be name as “handle + event handler name + Element name”
+      ex: _handleMouseDownDropdownToggle
+    pattern:
+      regexp: (@mousedown)((?!_handleMouseDown).)*$
+    glob: "*.ts"
+
+  - id: handle.event.mouseover
+    message: |
+      Name of function for internal event handler processing
+      will be name as “handle + event handler name + Element name”
+      ex: _handleMouseOverDropdownToggle
+    pattern:
+      regexp: (@mouseover)((?!_handleMouseOver).)*$
+    glob: "*.ts"
+
+  - id: handle.event.mouseleave
+    message: |
+      Name of function for internal event handler processing
+      will be name as “handle + event handler name + Element name”
+      ex: _handleMouseLeaveDropdownToggle
+    pattern:
+      regexp: (@mouseleave)((?!_handleMouseLeave).)*$
+    glob: "*.ts"
