@@ -1,0 +1,16 @@
+rules:
+  - id: color.code.not.be.6.digits
+    pattern:
+      regexp: \#(?![a-z0-9]{6})
+    message: |
+      Color codes should be written in lowercase and 6 digits
+      ex: #d4d7d7;
+    glob: "*.ts"
+
+  - id: using.bem.method
+    pattern:
+      regexp: ^\.(?!(kuc-))
+    message: |
+      Please using BEM method and start with kuc prefix
+      ex: .kuc-dropdown
+    glob: "*.ts"
