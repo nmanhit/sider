@@ -1,0 +1,28 @@
+rules:
+  - id: not.using.custom.event
+    not:
+      pattern:
+        regexp: new CustomEvent\(
+    message: |
+      Please using CustomEvent to implement events handling
+      ex: private _dispatchCustomEvent(eventName: string, detail?: object) {
+        const changeEvent = new CustomEvent(eventName, {
+          detail,
+          bubbles: true,
+          composed: true
+        });
+        return this.dispatchEvent(changeEvent);
+      }
+    glob:
+      - "src/button/index.ts"
+      - "src/checkbox/index.ts"
+      - "src/dropdown/index.ts"
+      - "src/multichoice/index.ts"
+      - "src/radio-button/index.ts"
+      - "src/text/index.ts"
+      - "src/textarea/index.ts"
+      - "src/mobile/button/index.ts"
+      - "src/mobile/checkbox/index.ts"
+      - "src/mobile/radio-button/index.ts"
+      - "src/mobile/text/index.ts"
+      - "src/mobile/textarea/index.ts"
