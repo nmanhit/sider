@@ -27,24 +27,13 @@ rules:
       }
     glob: "**/index.ts"
 
-  - id: dom.structure.label
+  - id: dom.structure
     pattern:
-      regexp: (class=("kuc-[^<>]+__label"))(?!.*?(id=\"\${this._GUID\}-label\"))
+      regexp: id="(?!\${this._GUID}-)[^"]+"
     message: |
-      Please put uuid using _generateGUID function to label
+      Please put uuid to id using _generateGUID function
       ex: <div
             class="kuc-multi-choice__label"
             id="${this._GUID}-label">
-          </div>
-    glob: "**.ts"
-
-  - id: dom.structure.error
-    pattern:
-      regexp: (class=("kuc-[^<>]+__error"))(?!.*?(id=\"\${this._GUID\}-error\"))
-    message: |
-      Please put uuid using _generateGUID function to error
-      ex: <div
-            class="kuc-multi-choice__error"
-            id="${this._GUID}-error">
           </div>
     glob: "**.ts"
