@@ -11,6 +11,6 @@ rules:
     pattern:
       regexp: ^\.(?!(kuc-))
     message: |
-      Please using BEM method and start with kuc prefix
+      Please start with kuc prefix
       ex: .kuc-dropdown
     glob: "*.ts"
