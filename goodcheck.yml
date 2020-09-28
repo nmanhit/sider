@@ -7,9 +7,9 @@ rules:
       ex: #d4d7d7;
     glob: "*.ts"
 
-  - id: using.bem.method
+  - id: using.prefix.kuc
     pattern:
-      regexp: ^\.(?!(kuc-))
+      regexp: \.(?!(kuc-))
     message: |
       Please start with kuc prefix
       ex: .kuc-dropdown
