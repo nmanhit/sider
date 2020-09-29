@@ -51,10 +51,10 @@ rules:
 
   - id: using.prefix.kuc
     pattern:
-      regexp: \.(?!(kuc-))
+      regexp: class="(?!(kuc-))
     message: |
-      Please start with kuc prefix
-      ex: .kuc-dropdown
+      Please start class css with kuc prefix
+      ex: kuc-dropdown
     glob: "*.ts"
 
   - id: dom.structure
