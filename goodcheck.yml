@@ -1,5 +1,4 @@
 rules:
-<<<<<<< HEAD
   - id: private.function
     pattern:
       regexp: private [^_]
@@ -38,7 +37,7 @@ rules:
       - pattern:
           regexp: (@mouseleave)((?!_handleMouseLeave).)*$
         glob: "*.ts"
-=======
+
   - id: not.exist.function.create.render.root
     not:
       pattern:
@@ -107,4 +106,3 @@ rules:
             id="${this._GUID}-label">
           </div>
     glob: "*.ts"
->>>>>>> master
