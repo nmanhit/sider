@@ -5,7 +5,7 @@ rules:
     message: Please put "_" onto the prefix of private variables or functions.
     glob: "*.ts"
 
-  - id: handle.even
+  - id: handle.event
     message: |
       Name of function for internal event handler processing
       will be name as “handle + event handler name + Element name”
