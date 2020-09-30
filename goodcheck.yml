@@ -14,15 +14,6 @@ rules:
         return this.dispatchEvent(changeEvent);
       }
     glob:
-      - "src/button/index.ts"
-      - "src/checkbox/index.ts"
-      - "src/dropdown/index.ts"
-      - "src/multichoice/index.ts"
-      - "src/radio-button/index.ts"
-      - "src/text/index.ts"
-      - "src/textarea/index.ts"
-      - "src/mobile/button/index.ts"
-      - "src/mobile/checkbox/index.ts"
-      - "src/mobile/radio-button/index.ts"
-      - "src/mobile/text/index.ts"
-      - "src/mobile/textarea/index.ts"
+      - "src/**/index.ts"
+      - "src/mobile/**/index.ts"
+
