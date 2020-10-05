@@ -80,6 +80,24 @@ rules:
       }
     glob: "*.ts"
 
+  - id: not.using.custom.event
+    not:
+      pattern:
+        regexp: new CustomEvent\(
+    message: |
+      Please using CustomEvent to implement events handling
+      ex: private _dispatchCustomEvent(eventName: string, detail?: object) {
+        const changeEvent = new CustomEvent(eventName, {
+          detail,
+          bubbles: true,
+          composed: true
+        });
+        return this.dispatchEvent(changeEvent);
+      }
+    glob:
+      - "src/**/index.ts"
+      - "src/mobile/**/index.ts"
+
   - id: color.code.not.be.6.digits
     pattern:
       regexp: \#(?![a-z0-9]{6})
