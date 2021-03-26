@@ -48,3 +48,10 @@ linter:
 #     - master
 #     - development
 #     - /^release-.*$/
+linter:
+   goodcheck:
+     config: goodcheck.yml
+branches:
+  exclude:
+    - /^v0..*/
+    - v0_dev
