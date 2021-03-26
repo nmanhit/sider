@@ -17,4 +17,5 @@
   @mouseover="${this._wrongFormatMouseOverDropdownToggle}"
   @mouseleave="${this._handleMouseLeaveDropdownToggle}"
   @mouseleave="${this._wrongFormatMouseLeaveDropdownToggle}"
+  @click="${this._handleClickDropdownToggle}"
 >
