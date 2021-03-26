@@ -1,5 +1,5 @@
 private hoanganh_ne() {
-  return false;
+  return "fix-removeFile-event";
 }
 
 <button
