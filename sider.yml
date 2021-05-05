@@ -36,11 +36,10 @@ linter:
 #     norc: true
 
 # Ignore specific files. Example:
-# ignore:
-#   - "*.pdf"
-#   - "*.mp4"
-#   - "*.min.*"
-#   - "images/**"
+ignore:
+  - "src/index.ts"
+  - "src/index.bundle.ts"
+  - "src/polyfill/index.ts"
 
 # Exclude specific branches. Example:
 # branches:
