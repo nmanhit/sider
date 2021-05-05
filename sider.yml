@@ -1,54 +1,10 @@
-# This is a configuration file to customize code analysis by Sider.
-#
-# For more information, see the documentation:
-# https://help.sider.review/getting-started/custom-configuration
-
-# Customize each tool. If analyses fail, try adjusting each option referencing the following example.
 linter:
-
-#   # Goodcheck example. See https://help.sider.review/tools/others/goodcheck
-  goodcheck:
-    config: config/goodcheck.yml
-#     target:
-#       - src/
-#       - test/
-
-#   # Misspell example. See https://help.sider.review/tools/others/misspell
-#   misspell:
-#     root_dir: project/
-#     target: [src/, test/]
-#     exclude: ["**/*.min.*"]
-#     locale: UK
-#     ignore: [center, behavior]
-
-#   # ShellCheck example. See https://help.sider.review/tools/shellscript/shellcheck
-#   shellcheck:
-#     root_dir: project/
-#     target:
-#       - "**/*.{sh,bash}"
-#       - shebang: true
-#     include: [SC2104, SC2105]
-#     exclude: [SC1000, SC1118]
-#     enable: all
-#     shell: bash
-#     severity: error
-#     norc: true
-
-# Ignore specific files. Example:
+    goodcheck:
+      config: goodcheck.yml
 ignore:
   - "src/index.ts"
   - "src/index.bundle.ts"
   - "src/polyfill/index.ts"
-
-# Exclude specific branches. Example:
-# branches:
-#   exclude:
-#     - master
-#     - development
-#     - /^release-.*$/
-linter:
-   goodcheck:
-     config: goodcheck.yml
 branches:
   exclude:
     - /^v0..*/
