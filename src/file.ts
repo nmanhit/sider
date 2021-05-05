@@ -1,5 +1,5 @@
 <button
-  class="kuc-dropdown__toggle1"
+  class="kuc-dropdown__toggle12"
   id="${this._GUID}-toggle"
   @click="${this._handleClickDropdownToggle}"
   @click="${this._wrongFormatClickDropdownToggle}"
