@@ -18,3 +18,7 @@
   @mouseleave="${this._handleMouseLeaveDropdownToggle}"
   @mouseleave="${this._wrongFormatMouseLeaveDropdownToggle}"
 >
+
+private hoanganh() {
+  return false;
+}

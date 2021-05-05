@@ -1,16 +1,20 @@
-export * from "./button";
-export * from "./checkbox";
-export * from "./dropdown";
-export * from "./multichoice";
-export * from "./notification";
-export * from "./radio-button";
-export * from "./spinner";
-export * from "./text";
-export * from "./textarea";
-
-export * from "./mobile/button";
-export * from "./mobile/checkbox";
-export * from "./mobile/radio-button";
-export * from "./mobile/text";
-export * from "./mobile/textarea";
-export * from "./mobile/notification";
+<button
+  class="kuc-dropdown__toggle"
+  id="${this._GUID}-toggle"
+  @click="${this._handleClickDropdownToggle}"
+  @click="${this._wrongFormatClickDropdownToggle}"
+  @change="${this._handleChangeDropdownToggle}"
+  @change="${this._wrongFormatChangeDropdownToggle}"
+  @focus="${this._handleFocusDropdownToggle}"
+  @focus="${this._wrongFormatFocusDropdownToggle}"
+  @blur="${this._handleBlurDropdownToggle}"
+  @blur="${this._wrongFormatBlurDropdownToggle}"
+  @keydown="${this._handleKeyDownDropdownToggle}"
+  @keydown="${this._wrongFormatKeyDownDropdownToggle}"
+  @mousedown="${this._handleMouseDownDropdownToggle}"
+  @mousedown="${this._wrongFormatMouseDownDropdownToggle}"
+  @mouseover="${this._handleMouseOverDropdownToggle}"
+  @mouseover="${this._wrongFormatMouseOverDropdownToggle}"
+  @mouseleave="${this._handleMouseLeaveDropdownToggle}"
+  @mouseleave="${this._wrongFormatMouseLeaveDropdownToggle}"
+>
