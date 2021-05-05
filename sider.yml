@@ -7,9 +7,8 @@
 linter:
 
 #   # Goodcheck example. See https://help.sider.review/tools/others/goodcheck
-#   goodcheck:
-#     root_dir: project/
-#     config: config/goodcheck.yml
+  goodcheck:
+    config: config/goodcheck.yml
 #     target:
 #       - src/
 #       - test/
