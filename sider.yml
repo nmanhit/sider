@@ -1,6 +1,6 @@
 linter:
-    goodcheck:
-      config: goodcheck.yml
+  goodcheck:
+    config: goodcheck.yml
 ignore:
   - "src/index.ts"
   - "src/index.bundle.ts"
