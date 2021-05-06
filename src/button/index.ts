@@ -30,7 +30,7 @@ export class Button extends LitElement {
     this.visible = props.visible !== undefined ? props.visible : this.visible;
   }
 
-  private _updateVisible() {
+  private updateVisible() {
     if (!this.visible) {
       this.setAttribute("hidden", "");
     } else {
@@ -38,7 +38,7 @@ export class Button extends LitElement {
     }
   }
 
-  private _handleClickButton(event: MouseEvent) {
+  private _clickButton(event: MouseEvent) {
     event.stopPropagation();
     this._dispatchCustomEvent("click");
   }
@@ -67,14 +67,14 @@ export class Button extends LitElement {
   }
 
   render() {
-    this._updateVisible();
+    this.updateVisible();
     return html`
       ${this._getStyleTagTemplate()}
       <button
         type="button"
         class="kuc-button__button kuc-button__button--${this._getButtonColorType()}"
         ?disabled="${this.disabled}"
-        @click="${this._handleClickButton}"
+        @click="${this._clickButton}"
       >
         ${this.text}
       </button>
@@ -121,7 +121,7 @@ export class Button extends LitElement {
           border: 1px solid #e3e7e8;
           background-color: #f7f9fa;
           box-shadow: 1px 1px 1px #ffffff inset;
-          color: #3498db;
+          color: #ccc;
         }
         .kuc-button__button--normal:hover,
         .kuc-button__button--normal:focus,
